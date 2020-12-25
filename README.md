@@ -1,4 +1,5 @@
 # intagram-clone
+###The tutorial ı follow :https://www.youtube.com/playlist?list=PLadt0EaV4m3AvmC3HzZ0Y2-u_Nunhj8qN
 
 ## Project setup
 ```
