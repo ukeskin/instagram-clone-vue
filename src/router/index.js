@@ -1,13 +1,23 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/home/index.vue";
+
 
 Vue.use(VueRouter);
 
 const routes = [{
     path: "/",
     name: "Home",
-    component: Home
+    component:() => import(/* webpackChunkName: "profile" */'../views/profile')
+  },
+  {
+    path: "/direct",
+    name: "Direct",
+    component:() => import(/* webpackChunkName: "profile" */'../views/direct')
+  },
+  {
+    path: "/explore",
+    name: "Explore",
+    component:() => import(/* webpackChunkName: "profile" */'../views/explore')
   },
   {
     path: "/profile",
@@ -20,17 +30,17 @@ const routes = [{
       component: () => import('../views/profile/post.vue'),
       },
       {
-      path: "/igtv",
-      name: "ProfileIGTVt",
+      path: "igtv",
+      name: "ProfileIGTV",
       component: () => import('../views/profile/igtv.vue'),
       },
       {
-      path: "/saved",
+      path: "saved",
       name: "ProfileSaved",
       component: () => import('../views/profile/saved.vue'),
       },
       {
-        path: "/tag",
+        path: "tag",
         name: "ProfileTag",
         component: () => import('../views/profile/tag.vue'),
       },
