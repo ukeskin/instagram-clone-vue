@@ -1,13 +1,7 @@
 <template>
-  <div class="home">
-    <CustomText tag="h1">profile</CustomText>
+  <div>
+    <CustomText tag="h2">profile</CustomText>
 
-    <div id="nav">
-      <router-link to="/profile">Post</router-link>
-      <router-link to="/profile/igtv">IGTV</router-link>
-      <router-link to="/profile/saved">Saved</router-link>
-      <router-link to="/profile/tag">Tag</router-link>
-    </div>
     <router-view />
   </div>
 </template>

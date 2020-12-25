@@ -1,10 +1,6 @@
 <template>
   <div class="home">
-    <h1>Home</h1>
-    <CustomText class="a1" tag="p">Merhaba dünya</CustomText>
-    <CustomText class="a2" tag="p">Merhaba dünya</CustomText>
-    <CustomText class="a3" tag="p">Merhaba dünya</CustomText>
-    <CustomText tag="p">Merhaba dünya</CustomText>
+    <CustomText tag="h2">Home</CustomText>
   </div>
 </template>
 

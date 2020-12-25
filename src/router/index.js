@@ -1,58 +1,64 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Home from '../views/home/index.vue'
 
+Vue.use(VueRouter)
 
-Vue.use(VueRouter);
-
-const routes = [{
-    path: "/",
-    name: "Home",
-    component:() => import(/* webpackChunkName: "profile" */'../views/profile')
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
   },
   {
-    path: "/direct",
-    name: "Direct",
-    component:() => import(/* webpackChunkName: "profile" */'../views/direct')
+    path: '/direct',
+    name: 'Direct',
+    component: () => import(/* webpackChunkName: "profile" */ '../views/direct')
   },
   {
-    path: "/explore",
-    name: "Explore",
-    component:() => import(/* webpackChunkName: "profile" */'../views/explore')
+    path: '/explore',
+    name: 'Explore',
+    component: () =>
+      import(/* webpackChunkName: "profile" */ '../views/explore')
   },
   {
-    path: "/profile",
-    name: "Profile",
-    component: () => import('../views/profile/index.vue'),
+    path: '/profile',
+    name: 'Profile',
+    component: () =>
+      import(/* webpackChunkName: "profile" */ '../views/profile'),
     children: [
       {
-      path: "/",
-      name: "ProfilePost",
-      component: () => import('../views/profile/post.vue'),
+        path: '',
+        name: 'ProfilePost',
+        component: () =>
+          import(/* webpackChunkName: "profile" */ '../views/profile/post')
       },
       {
-      path: "igtv",
-      name: "ProfileIGTV",
-      component: () => import('../views/profile/igtv.vue'),
+        path: 'igtv',
+        name: 'ProfileIGTV',
+        component: () =>
+          import(/* webpackChunkName: "profile" */ '../views/profile/igtv')
       },
       {
-      path: "saved",
-      name: "ProfileSaved",
-      component: () => import('../views/profile/saved.vue'),
+        path: 'saved',
+        name: 'ProfileSave',
+        component: () =>
+          import(/* webpackChunkName: "profile" */ '../views/profile/saved')
       },
       {
-        path: "tag",
-        name: "ProfileTag",
-        component: () => import('../views/profile/tag.vue'),
-      },
-  
-  ]
+        path: 'tag',
+        name: 'ProfileTag',
+        component: () =>
+          import(/* webpackChunkName: "profile" */ '../views/profile/tag')
+      }
+    ]
   }
-];
+]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
-});
+})
 
-export default router;
+export default router
