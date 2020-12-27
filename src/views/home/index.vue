@@ -1,8 +1,9 @@
 <template>
   <div class="home">
     <div class="timeline">
-      <p>lorem ipsum dolor sit amet, consectetur a yarakkkdip</p>
-      <Avatar :size="80" />
+      <Post />
+      <Post />
+      <Post />
     </div>
     <div class="sidebar">
       <p>lorem ipsum dolor sit amet, consectetur adip</p>
@@ -11,10 +12,10 @@
 </template>
 
 <script>
-import Avatar from "@/components/Avatar.vue";
+import Post from "@/components/Post";
 export default {
   name: "Home",
-  components: { Avatar },
+  components: { Post },
 };
 </script>
 
