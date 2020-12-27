@@ -1,27 +1,39 @@
 <template>
   <div class="home">
-    <CustomText tag="h2">Home</CustomText>
+    <div class="timeline">
+      <p>lorem ipsum dolor sit amet, consectetur a yarakkkdip</p>
+      <Avatar :size="80" />
+    </div>
+    <div class="sidebar">
+      <p>lorem ipsum dolor sit amet, consectetur adip</p>
+    </div>
   </div>
 </template>
 
 <script>
-import CustomText from "@/components/CustomText";
+import Avatar from "@/components/Avatar.vue";
 export default {
   name: "Home",
-  components: {
-    CustomText,
-  },
+  components: { Avatar },
 };
 </script>
 
 <style scoped>
-.a1 {
-  color: rgba(var(--ba8), 0.5);
+.home {
+  max-width: 605px;
+  margin: 0 auto;
+
+  @media (--t) {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr 295px;
+    grid-gap: 30px;
+  }
 }
-.a2 {
-  color: rgb(var(--b3f));
-}
-.a3 {
-  color: rgb(var(--ba8));
+.sidebar {
+  display: none;
+  @media (--t) {
+    display: block;
+  }
 }
 </style>
